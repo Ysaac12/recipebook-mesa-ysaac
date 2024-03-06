@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ recipe.name }}</title>
+    </head>
+    <body>
+        <h1>{{ recipe.name }}</h1>
+            <h2>Ingredients:</h2>
+                <ul>
+                    {% for ingredient in recipe.ingredient.all %}
+                        <li>{{ ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            {% url 'recipe-detail' pk=recipe.pk as link %}
+            <a href="{{ link }}">Link</a> <br>
+            <a href="{% url 'ledger:recipe-list' %}">Back </a>
+    </body>
+</html>

@@ -1,3 +1,4 @@
+#project/url.py
 """
 URL configuration for recipebook project.
 
@@ -18,8 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('recipes/', include('ledger.urls', namespace = 'ledger')),
-    path('recipe/', include('ledger.urls', namespace = 'ledger')),
+    path("admin/", admin.site.urls),
+    path("recipes/", include('ledger.urls', namespace = "ledger")),
+    
     
 ]
